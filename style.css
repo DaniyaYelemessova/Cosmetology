@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: #fffdee;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Cinzel', serif;
+    font-size: 60px;
+    color: #c3b4d7;
+    letter-spacing: 2PX;
+
+}
+
+
+.heading{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Cinzel', serif;
+    color: #423f3b;
+    letter-spacing: 2px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dcc7d2;
+    height: 180px;
+    width: 120px;
+    margin: 20px;
+    background: #dcc7d2;
+    box-shadow:  7px 7px 25px #cab7c1,
+                -7px -7px 25px #eed7e3;
+}
+
+.left{
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.right{
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+h3{
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+    color: #423f3b;
+    letter-spacing: 2px;
+}
+
+h4{
+    font-family: 'Cinzel', serif;
+    color: #423f3b;
+    font-size: 30px;
+}
+
+.audio{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+img{
+    border-radius: 10px;
+}
+
+.top{
+    margin-top: 100px;
+}
+
+.gallery{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img{
+    width: 100%;
+    height: 350px;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+}
+
+#backBtn, #nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+@media all and (max-width:500px){
+
+    .gallery div{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+
+    .gallery div img{
+        width: 100%;
+        height: 150px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    img{
+        width: 30px;
+    }
+
+
+    .audio{
+        margin-bottom: 50px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .block{
+        padding: 20px;
+        height: 160px;
+        width: 80px;
+        margin: 8px;
+        
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    .text{
+        font-size: 12px;
+    }
+
+}
